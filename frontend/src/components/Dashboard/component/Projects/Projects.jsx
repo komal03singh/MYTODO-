@@ -180,7 +180,7 @@ function Project() {
               Invites
             </button>
             {isInviteButtonClicked ? (
-              <button className="absolute top-19 left-60 h-4/5 w-3/5 bg-black/10 backdrop-blur-3xl flex flex-col rounded-2xl text-black p-6 gap-6">
+              <div className="absolute top-19 left-60 h-4/5 w-3/5 bg-black/10 backdrop-blur-3xl flex flex-col rounded-2xl text-black p-6 gap-6">
                 <div className="border-b h-8 border-black/20 flex flex-row justify-between w-full px-4 ">
                   <div className="flex flex-row gap-6 text-bottom">
                     <button
@@ -333,7 +333,7 @@ function Project() {
                       </motion.ul>
                     ))}
                 </div>
-              </button>
+              </div>
             ) : null}
             <button
               onClick={handleAddProject}

@@ -69,8 +69,8 @@ export const getSingleProject = asyncHandler(async(req,res)=>{
     .json(new ApiResponse(200,"Project fetched Successfully!",project))
 })
 
-export const addCollaborator = asyncHandler(async(req,res)=>{
-    console.log("req.user in addCollaborator:", req.user);
+export const addCollaborator = asyncHandler(async(req,res) => {
+    
     const {userId, projectId} = req.body
 
     if(!userId){
@@ -94,7 +94,7 @@ export const addCollaborator = asyncHandler(async(req,res)=>{
     },
     {
         $addToSet : {
-            members : userId
+            members : { userId }
         }
     },
     {
